@@ -19,8 +19,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_CFLAGS} -std=c99")
 file (GLOB Sources
   "${SOURCE_DIR}/src/tny/*.c"
   "${SOURCE_DIR}/src/tny/*.h"
-  "${SOURCE_DIR}/src/tny/*.hpp”
-  )
+  "${TNY_CPP_HEADER_FILE}")
 
 # Create static library to use.
 add_library(cibc_tny ${Sources})
