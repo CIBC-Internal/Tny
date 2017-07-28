@@ -1,4 +1,5 @@
 # Binary outputs
 bin/
 *.o
+.DS_Store
 
