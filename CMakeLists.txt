@@ -25,3 +25,5 @@ set (Sources
 
 # Create static library to use.
 add_library(cibc_tny ${Sources})
+
+SET(SCI_TNY_LIBRARY cibc_tny CACHE INTERNAL "tny library name." FORCE)
