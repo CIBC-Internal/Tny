@@ -23,7 +23,6 @@ set (Sources
   src/tny/tny.c
   src/tny/tny.h)
 
+SET(SCI_TNY_LIBRARY cibc_tny CACHE INTERNAL "tny library name.")
 # Create static library to use.
-add_library(cibc_tny STATIC ${Sources})
-
-SET(SCI_TNY_LIBRARY cibc_tny CACHE INTERNAL "tny library name." FORCE)
+add_library(${SCI_TNY_LIBRARY} STATIC ${Sources})
