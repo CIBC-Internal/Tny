@@ -24,5 +24,6 @@ set (Sources
   src/tny/tny.h)
 
 SET(SCI_TNY_LIBRARY cibc_tny CACHE INTERNAL "tny library name.")
+MESSAGE("cibc-tny: " ${SCI_TNY_LIBRARY})
 # Create static library to use.
 add_library(${SCI_TNY_LIBRARY} STATIC ${Sources})
