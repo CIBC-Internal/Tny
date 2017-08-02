@@ -23,7 +23,7 @@ set (Sources
   src/tny/tny.c
   src/tny/tny.h)
 
-SET(SCI_TNY_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}" CACHE INTERNAL "Tny include directories.")
+SET(SCI_TNY_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/src" CACHE INTERNAL "Tny include directories.")
 
 SET(SCI_TNY_LIBRARY cibc_tny CACHE INTERNAL "tny library name.")
 MESSAGE("cibc-tny: " ${SCI_TNY_LIBRARY})
