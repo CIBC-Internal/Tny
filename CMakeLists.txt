@@ -31,5 +31,5 @@ add_library(${SCI_TNY_LIBRARY} STATIC ${Sources})
 set(SCI_TNY_LIBRARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
 set(TNY_USE_FILE "${CMAKE_CURRENT_SOURCE_DIR}/UseTny.cmake")
 
-configure_file(TnyConfig.cmake.in "${CMAKE_CURRENT_BINARY_DIR}/TnyConfig.cmake" @ONLY)
+#configure_file(TnyConfig.cmake.in "${CMAKE_CURRENT_BINARY_DIR}/TnyConfig.cmake" @ONLY)
 export(TARGETS ${SCI_TNY_LIBRARY} FILE TnyExports.cmake)
