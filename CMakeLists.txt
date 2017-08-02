@@ -23,6 +23,8 @@ set (Sources
   src/tny/tny.c
   src/tny/tny.h)
 
+SET(SCI_TNY_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}" CACHE INTERNAL "Tny include directories.")
+
 SET(SCI_TNY_LIBRARY cibc_tny CACHE INTERNAL "tny library name.")
 MESSAGE("cibc-tny: " ${SCI_TNY_LIBRARY})
 # Create static library to use.
@@ -31,5 +33,5 @@ add_library(${SCI_TNY_LIBRARY} STATIC ${Sources})
 set(SCI_TNY_LIBRARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
 set(TNY_USE_FILE "${CMAKE_CURRENT_SOURCE_DIR}/UseTny.cmake")
 
-#configure_file(TnyConfig.cmake.in "${CMAKE_CURRENT_BINARY_DIR}/TnyConfig.cmake" @ONLY)
+configure_file(TnyConfig.cmake.in "${CMAKE_CURRENT_BINARY_DIR}/TnyConfig.cmake" @ONLY)
 export(TARGETS ${SCI_TNY_LIBRARY} FILE TnyExports.cmake)
